@@ -1,29 +1,43 @@
-from operator import le, rshift
+
+
 import re
-from tkinter import W
 
 
 course="Python kursu questions'lari"
 website="http://www.sadikturan.com"
 #1.'course' karakter dizisinde kac karakter bulunmaktadir?
 result=len(course)
-print(result)
 lengt=len(website)
 
 #2.'website' icinden www karakterlerini alin.
 result=website[7:10]
-print(result)
 
 #3.'website' icinde com karakterlerini alin
 result=website[21:24]
-print(result)
 result=website[lengt-3:lengt]
 
 #4. 'course' icinden ilk 15 ve son 15 karakterlerini alin 
 result = course[0:15]
-print(result)
 result = course[:15]
-print(result)
+result = course[-15:]
+
 result = course[-15:-1]
+#5. 'course' ifadesindeki karakterleri tersten yazdirin.
+result = course[::-1]
+
+s= '12345' * 5
+print(result)
+print(s[::5])
+
+name, surname, age, job='Bora', 'Yilmaz',"32" , 'muhendis'
+
+#6. Yukarida verilen degiskenler ile ekrana asagidaki ifadeyi yazdirin
+# Benim adim Bora Yilmaz, yasim 32 ve meslegim muhendis
+
+result = "Benim adim "+ name + " " + surname + ",Yasim " + age+ " ve meslegim " + job 
 print(result)
 
+#7. 'Hello world' ifadesindeki w harfini "W" ile degistirin
+s='Hello world' 
+s =s[0:6]+ 'W'+ s[-4:]
+print(s)
